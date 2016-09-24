@@ -2,20 +2,20 @@ module.exports = function(app, passport) {
 
     // HOMEPAGE
     app.get('/', function(req, res) {
-        res.render('home.ejs'); // load the index.ejs file
+        res.render('page-login.ejs', { message: req.flash('loginMessage') }); 
     });
 
     // LOGIN
-    app.get('/login', function(req, res) {
-
-        // render the page and pass in any flash data if it exists
-        res.render('login.ejs', { message: req.flash('loginMessage') }); 
-    });
+//    app.get('/login', function(req, res) {
+//
+  //      // render the page and pass in any flash data if it exists
+    //    res.render('page-login.ejs', { message: req.flash('loginMessage') }); 
+    //});
 
     // process the login form
-    app.post('/login', passport.authenticate('local-login', {
+    app.post('/', passport.authenticate('local-login', {
         successRedirect : '/index', // redirect to the secure profile section
-        failureRedirect : '/login', // redirect back to the signup page if there is an error
+        failureRedirect : '/', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));
 
@@ -23,7 +23,7 @@ module.exports = function(app, passport) {
     app.get('/signup', function(req, res) {
 
         // render the page and pass in any flash data if it exists
-        res.render('signup.ejs', { message: req.flash('signupMessage') });
+        res.render('page-signup.ejs', { message: req.flash('signupMessage') });
     });
 
     // process the signup form
@@ -45,6 +45,24 @@ module.exports = function(app, passport) {
         req.logout();
         res.redirect('/');
     });
+
+    // APP PAGES
+    app.get('/chart-flot', function(req, res) {
+        res.render('chart-flot.ejs', { message: req.flash('chart-flot') });
+    });
+
+    app.get('/comp-chart', function(req, res) {
+        res.render('comp-chart.ejs', {
+            user : req.user // get the user out of session and pass to template
+        });
+    });
+
+    app.get('/tables', function(req, res) {
+        res.render('tables.ejs', {
+            user : req.user // get the user out of session and pass to template
+        });
+    });
+
 };
 
 function isLoggedIn(req, res, next) {

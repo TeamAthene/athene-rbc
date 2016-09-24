@@ -381,7 +381,7 @@ body {
 	}
 
 	header.yt-background {
-		background-image: url('../img/video.jpg');
+		background-image: url('../img/search.jpg');
 		background-repeat: no-repeat;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -551,7 +551,7 @@ body {
 }
 
 	.icons {
-		background-color: #fff;
+		background-color: #fafafa;
 		overflow: hidden;
 	}
 
@@ -1087,7 +1087,7 @@ Commone Searches------
   margin: 40px 0 0;
   padding: 0;
   text-align: center;
-  color: #777;
+  color: #000;
   font-family: 'Gotham SSm A', 'Gotham SSm B', Gotham, sans-serif;
   font-size: 16px;
   letter-spacing: .5px;
@@ -1105,3 +1105,5 @@ Commone Searches------
 .common-searches a:hover {
   color: #222;
 }
+
+

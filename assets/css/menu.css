@@ -12,7 +12,7 @@ File: Menu
   z-index: 999;
 }
 .topbar .topbar-left {
-  background: #ffffff;
+  background: #fafafa;
   border-top: 3px solid #71b6f9;
   float: left;
   text-align: center;
@@ -25,7 +25,7 @@ File: Menu
   line-height: 70px;
 }
 .navbar-default {
-  background-color: #ebeff2;
+  background-color: #fafafa;
   border-radius: 0px;
   border: none;
   border-top: 3px solid #71b6f9;

@@ -29,11 +29,8 @@ File: Chartjs
                     new Chart(ctx, {type: 'line', data: data, options: options});
                     break;
                 case 'Doughnut':
-                    new Chart(ctx, {type: 'doughnut', data: data, options: options});
-                    break;
-                case 'Pie':
-                    new Chart(ctx, {type: 'pie', data: data, options: options});
-                    break;
+                   
+
                 case 'Bar':
                     new Chart(ctx, {type: 'bar', data: data, options: options});
                     break;
@@ -75,7 +72,7 @@ File: Chartjs
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [65, 59, 80, 81, 56, 55, 40, 35, 30]
+                    data: [65, 59, 80, 81, 56, 55, 40, 35, 30],
                 }
             ]
         };
@@ -94,56 +91,7 @@ File: Chartjs
 
         this.respChart($("#lineChart"),'Line',lineChart, lineOpts);
 
-        //donut chart
-        var donutChart = {
-            labels: [
-                "Desktops",
-                "Tablets",
-                "Mobiles"
-            ],
-            datasets: [
-                {
-                    data: [300, 50, 100],
-                    backgroundColor: [
-                        "#188ae2",
-                        "#10c469",
-                        "#f9c851"
-                    ],
-                    hoverBackgroundColor: [
-                        "#188ae2",
-                        "#10c469",
-                        "#f9c851"
-                    ],
-                    hoverBorderColor: "#fff"
-                }]
-        };
-        this.respChart($("#doughnut"),'Doughnut',donutChart);
-
-
-        //Pie chart
-        var pieChart = {
-            labels: [
-                "Desktops",
-                "Tablets",
-                "Mobiles"
-            ],
-            datasets: [
-                {
-                    data: [300, 50, 100],
-                    backgroundColor: [
-                        "#ff8acc",
-                        "#5b69bc",
-                        "#f9c851"
-                    ],
-                    hoverBackgroundColor: [
-                        "#ff8acc",
-                        "#5b69bc",
-                        "#f9c851"
-                    ],
-                    hoverBorderColor: "#fff"
-                }]
-        };
-        this.respChart($("#pie"),'Pie',pieChart);
+     
 
 
         //barchart
@@ -166,10 +114,10 @@ File: Chartjs
 
         //radar chart
         var radarChart = {
-            labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+            labels: ["Shipping", "Vendor", "Employee", "Accounting", "Rent", "Blah", "Blah"],
             datasets: [
                 {
-                    label: "Desktops",
+                    label: "My Spending",
                     backgroundColor: "rgba(179,181,198,0.2)",
                     borderColor: "rgba(179,181,198,1)",
                     pointBackgroundColor: "rgba(179,181,198,1)",
@@ -179,7 +127,7 @@ File: Chartjs
                     data: [65, 59, 90, 81, 56, 55, 40]
                 },
                 {
-                    label: "Tablets",
+                    label: "Competitor Spending",
                     backgroundColor: "rgba(255,99,132,0.2)",
                     borderColor: "rgba(255,99,132,1)",
                     pointBackgroundColor: "rgba(255,99,132,1)",
@@ -231,3 +179,4 @@ function($) {
     "use strict";
     $.ChartJs.init()
 }(window.jQuery);
+
