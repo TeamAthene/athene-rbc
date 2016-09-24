@@ -49,7 +49,6 @@
       <script src="js/respond.min.js"></script>
 
     <![endif]-->
-
   <script>
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
@@ -174,22 +173,28 @@ display: none;
 
 <div class="dark">
   <div id="search">
-    <div id="search" class="section section-search" , >
-      <div class="container">
-        <div class="row">
-          <div id="custom-search-input">
-            <div class="input-group col-md-12">
-              <input type="text" class=" st-default-search-input  form-control" placeholder="Search"  />
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">
-                  </button>
-                </span>
-            </div>
-          </div>
+  <!--[if lt IE 9]>
+  Orginal
+    <span><input type="" class="search rounded" placeholder="Search..."></span>
+  <![endif]-->
+ <div class="container">
+          <div class="row">
+                    <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class=" st-default-search-input search-query form-control" placeholder="Search"  />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+  </div>
         </div>
       </div>
+
+
     </div>
-  </div>
 <!-- /Search End Here -->
 
 <style>
@@ -198,10 +203,9 @@ color: #b2b2b2;
 
 <p class="common-searches">
 
-<em>Popular keywords:</em>
-<a href="">Apply for loan</a>, 
-<a href="">benfits</a>, 
-<a href="">competitive analysis</a>
+<button type="button" class="btn btn-default btn-bordred waves-effect w-md m-b-5">Appy for loans</button>
+<button type="button" class="btn btn-default btn-bordred waves-effect w-md m-b-5">benfits</button>
+<button type="button" class="btn btn-default btn-bordred waves-effect w-md m-b-5">competitive analysis</button>
 
         </p>
   </header>
@@ -262,6 +266,18 @@ color: #b2b2b2;
     border-radius: 4px;
 }
 
+  .lj-title h1 {
+    font-family: 'Raleway';
+    font-size: 3.5em;
+    font-weight: 300;
+    color: #000;
+    margin: 0;
+    word-wrap: break-word;
+}
+.lj-title span {
+    color: #000;
+    font-weight: 700;
+}
 
 #custom-search-input {
         margin:0;
@@ -271,37 +287,38 @@ color: #b2b2b2;
         -webkit-appearance: none;
     }
  
-#custom-search-input .search-query {
-    padding-right: 3px;
-    padding-right: 4px \9;
-    padding-left: 3px;
-    padding-left: 4px \9;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
-
-    margin-bottom: 0;
-    border-radius: 3px;
-}
-
-#custom-search-input button {
-    border: 0;
-    background: none;
-    /** belows styles are working good */
-    padding: 2px 5px;
-    margin-top: 2px;
-    position: relative;
-    left: -28px;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
-    margin-bottom: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    color:#cccccc;
-}
-
-.search-query:focus + button {
-    z-index: 3;   
-}
-
+    #custom-search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    #custom-search-input button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color:#D9230F;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
 
    </style>   
 <div class="icons module" id="topics"> 
