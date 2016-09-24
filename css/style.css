@@ -247,7 +247,7 @@ body {
 	}
 
 	.lj-preloader {
-		background: #fff url('../img/preloader.gif') no-repeat center center;
+		background: #fff url('../img/loading.gif') no-repeat center center;
 		bottom: 0;
 		height: 100%;
 		left: 0;
@@ -912,6 +912,13 @@ body {
     	border: 1px solid #fff;
     	color: #fff;
     }
+
+    #fixedbottom 
+    {
+	    position: fixed;
+	    bottom: 10px;
+	    right: 10px; 
+	}
 
 
 
