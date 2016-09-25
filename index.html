@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,13 +43,16 @@
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-<script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
+  <script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
 
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
 
     <![endif]-->
+
+
+
   <script>
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
@@ -67,7 +71,7 @@
   });
   </script>
     <script>
-  function changeSearchSize()
+  window.onload = function changeSearchSize()
       {
         document.getElementById("search").style.height="74%";
         document.getElementById("search").style.width="74%";
@@ -89,171 +93,160 @@
 
   </head>
     
-  <body onResize="changeSearchSize()">
+  <body onResize="changeSearchSize();">
 
-    <script>
-      $(window).load(function(){$('html, body').animate({scrollTop:0}, 'fast');});
-    </script>
 
-    <!-- PRELOADER -->
-    <div class="lj-preloader"></div>
-    <!-- /PRELOADER -->
 
-<!-- ********************HEADER******************** -->
-    <header class="yt-background">
+   <script>
+    $(window).load(function(){$('html, body').animate({scrollTop:0}, 'fast');});
+   </script>
 
-      <!-- Navigation -->
-      <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation" style="padding:0;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #e0e0e0;">
-        <div class="container-fluid">
-            <div class="navbar-header" style="padding: 0 0 0 35px;">
-              <a class="navbar-brand" href="#top">
-                <img  alt="" src="img/athene-logo.png" scale="0" style="height: 30px;">
+<!-- PRELOADER -->
+  <div class="lj-preloader"></div>
+  <!-- /PRELOADER -->
+  <!-- HEADER -->
+  <header class="yt-background">
+
+
+<!--NavBar-->
+<div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header"><a class="navbar-brand" href="#top"><img  alt="" src="img/RBC_Logo.png" scale="0" style="height: 36px;"></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-menubuilder">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="">Account</a>
+                </li>
+                <li><a href="#topics">Apps</a>
+                </li>
+                <li> <div class="notification-box">
+                                    <ul class="list-inline m-b-0">
+                                        <li>
+                                            <a href="notify.html" class="right-bar-toggle">
+                                                <i class="zmdi zmdi-notifications-none"></i>
+                                            </a>
+                                            <div class="noti-dot">
+                                                <span class="dot"></span>
+                                                <span class="pulse"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+  
+
+
+    
+    <div class="container" id="top">
+      
+      <div class="wrapper">
+
+        <!-- LOGO -->
+          <div class="row">
+            <div class="col-xs-12 lj-logo" data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s">
+            
               </a>
             </div>
-            <div class="collapse navbar-collapse navbar-menubuilder">
-                <ul class="nav navbar-nav navbar-right" style="padding: 0 50px 0 0">
-                    <li><a href="">Account</a>
-                    </li>
-                    <li><a href="#topics">Apps</a>
-                    </li>
-                    <li> <div class="notification-box">
-                        <ul class="list-inline m-b-0">
-                            <li>
-                                <a href="notify.html" class="right-bar-toggle">
-                                    <i class="zmdi zmdi-notifications-none"></i>
-                                </a>
-                                <div class="noti-dot">
-                                    <span class="dot"></span>
-                                    <span class="pulse"></span>
-                                </div>
-                            </li>
-                        </ul>
-                      </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-      </div>
-      <!-- End Navigation -->
-      
-      <div class="container" id="top">
-        <div class="wrapper">
-          <style type="text/css">
-            .lj-title h1 {
-              font-family: 'Raleway';
-              font-size: 3.5em;
-              font-weight: 300;
-              color: #000;
-              margin: 0;
-              word-wrap: break-word;
-          }
-          .lj-title span {
-              color: #000;
-              font-weight: 700;
-          }
-          </style>
-            
-          <!-- TITLE -->
-          <div class="row-fluid">
-              <div style="background-color: white; height:20px;" class="hidden-md hidden-lg col-xs-12 col-md-12"></div>
-          </div> 
-          <div class="row-fluid">
-            <div class="col-xs-12 col-md-2">
-              <img class="center-block" style="height:190px; width:190px;" src="img/arbie_circleicon.png">
-            </div>
-            <div style="padding: 0 0 0 75px;" class="hidden-xs hidden-sm col-md-8">
-              <p id="text-working" >Hi Bianca<br>
-              How can I help you today?</p>
+    
+<style type="text/css">
+  .lj-title h1 {
+    font-family: 'Raleway';
+    font-size: 3.5em;
+    font-weight: 300;
+    color: #000;
+    margin: 0;
+    word-wrap: break-word;
+}
+.lj-title span {
+    color: #000;
+    font-weight: 700;
+}
+
+</style>
+        
+        <!-- TITLE -->
+          <div class="row">
+            <div class="col-xs-12 lj-title" data-scroll-reveal="wait 0.5s, then enter left and move 40px over 1s">
+              <h1 class="lj-text-center">Ask <span>Athene</span>.</h1>
             </div>
           </div>
-          <div class="row-fluid">
-            <div style="background-color: white; height:30px;" class="col-xs-12 col-md-12"></div>
-          </div> 
-          <div class="row-fluid">
-            <style>
-              .st-default-search-input
-              {
-                display: inline-block;
-                width: 190px;
-                height: 16px;
-                padding: 7px 11px 7px 11px;
-                border: 1px solid #bbb;
-                border: 1px solid rgba(0,0,0,0.25);
-                font-weight: 400;
-                color: #3A444F;
-                font-size: 25px;
-                line-height: 16px;
-                box-sizing: border-box;
-                background-position: right;
-                background: no-repeat url();
-                background-clip: padding-box;
-                -moz-border-radius: 5px;
-                -webkit-border-radius: 5px;
-                border-radius: 5px;
-                -moz-box-shadow: none;
-                -webkit-box-shadow: none;
-                box-shadow: none;
-                font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
-              }
-            </style>
-            <div style="background-color: white;" class="input-group col-xs-12 col-md-12">
-              <input style="height:50px;"type="text" class=" st-default-search-input search-query form-control center-block" placeholder="Ask Arbie"/>
-            </div>
-          </div> 
-
-          <!-- /TITLE -->
-          
-          <!-- LINE 
-            <div class="row">
-              <div class="col-xs-12 lj-line" data-scroll-reveal="wait 0.75s, then enter right and move 40px over 1s">
-                <div></div>
-              </div>
-            </div>
-          <!-- /LINE -->
-
-          <!-- TITLE PARAGRAPH
-            <div class="row">
-              <div class="col-xs-12 col-sm-8 col-sm-offset-2 lj-title-paragraph" data-scroll-reveal="wait 1s, then enter right and move 40px over 1s">
-              </div>
-            </div>
-            <br>
-          <!-- /TITLE PARAGRAPH -->
-
-          <!-- Search Start Here -->
-          <style>
-            a.st-ui-stamp{
-            display: none;
-            }
-          </style>
-
-          <div class="dark">
-            <div id="search">
-             <div class="container">
-                <div class="row">
-                  <p class="common-searches">
-                    <button class="rbc-common" ="rbc-common">Appy for loans</button>
-                    <button class="rbc-common" ="rbc-common">benfits</button>
-                    <button class="rbc-common">competitive analysis</button>
-                  </p>
-                </div>
-              </div>
+        <!-- /TITLE -->
+        
+        <!-- LINE -->
+          <div class="row">
+            <div class="col-xs-12 lj-line" data-scroll-reveal="wait 0.75s, then enter right and move 40px over 1s">
+              <div></div>
             </div>
           </div>
-          <!-- /Search End Here 
+        <!-- /LINE -->
 
-          <style>
-            color: #b2b2b2;
-          </style>
+        <!-- TITLE PARAGRAPH -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 lj-title-paragraph" data-scroll-reveal="wait 1s, then enter right and move 40px over 1s">
+            </div>
+          </div>
+<br>
+        <!-- /TITLE PARAGRAPH -->
 
-          <p class="common-searches">
-            <button type="button" class="btn btn-default btn-bordred waves-effect w-md m-b-5">Appy for loans</button>
-            <button type="button" class="btn btn-default btn-bordred waves-effect w-md m-b-5">benfits</button>
-            <button type="button" class="btn btn-default btn-bordred waves-effect w-md m-b-5">competitive analysis</button>
-          </p> -->
+<!-- Search Start Here -->
+ <style>
+a.st-ui-stamp{
+display: none;
+}
+</style>
+
+<div class="dark">
+<div id="search">
+<!--[if lt IE 9]>
+Orginal
+  <span><input type="" class="search rounded" placeholder="Search..."></span>
+<![endif]-->
+
+ <div class="container">
+          <div class="row">
+                    <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class=" st-default-search-input search-query form-control" placeholder="Search"  />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+  </div>
         </div>
       </div>
-    </header>
-<!-- ********************END HEADER******************** -->
+
+
+    </div>
+<!-- /Search End Here -->
+
+
+    </div>
+<!-- /Search End Here -->
+
+    <style>
+color: #b2b2b2;
+</style>
+<p class="common-searches">
+
+<button type="button" class="btn btn-default btn-bordred waves-effect w-md m-b-5">Appy for loans</button>
+<button type="button" class="btn btn-default btn-bordred waves-effect w-md m-b-5">benfits</button>
+<button type="button" class="btn btn-default btn-bordred waves-effect w-md m-b-5">competitive analysis</button>
+
+
+
+        </p>
+  </header>
+  <!-- /HEADER -->
   
       <div class="lj-scroll-down hidden-xs" data-scroll-reveal="wait 1.75s, then enter top and move 20px over 1s">
         <a href="#" title="">
@@ -310,25 +303,51 @@
     border-radius: 4px;
 }
 
-  .lj-title h1 {
-    font-family: 'Raleway';
-    font-size: 3.5em;
-    font-weight: 300;
-    color: #000;
-    margin: 0;
-    word-wrap: break-word;
-}
-.lj-title span {
-    color: #000;
-    font-weight: 700;
-}
+
 
 #custom-search-input {
         margin:0;
         margin-top: 10px;
         padding: 0;
-        border-radius: 0;
-        -webkit-appearance: none;
+    }
+ 
+    #custom-search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    #custom-search-input button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color:#D3D3D3;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
+
+#custom-search-input {
+        margin:0;
+        margin-top: 10px;
+        padding: 0;
     }
  
     #custom-search-input .search-query {
@@ -364,7 +383,7 @@
         z-index: 3;   
     }
 
-        #custom-bootstrap-menu.navbar-default {
+    #custom-bootstrap-menu.navbar-default {
     font-size: 14px;
     background-color: #f2f2f2;
     color: rgba(1, 1, 1, 0.8);
@@ -383,60 +402,38 @@
     max-height: 50px;
 }
 
-#text-working
-{
-  margin: 20px 0 20px 0;
-  font-size: 45px;
-  color: #160f8a;
-}
-
-</style> 
-
-<div class="md-modal md-effect-1" id="modal-1">
-    <div class="md-content">
-      <h3 style="color: #003da3;">Modal Dialog</h3>
-      <div style="overflow: scroll; height: 400px;">
-        <p>This is a modal window. You can do the following things with it:</p>
-        <ul>
-          <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-          <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-          <li><strong>Close:</strong> click on the button below to close the modal.</li>
-        </ul>
-      </div>
-      <a href="#" id="fixedbottom" class="md-close" data-modal="modal-1"><img src="img/add-button.png"></a>
-    </div>
-  </div>  
+   </style>   
 <div class="icons module" id="topics"> 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-6" id="test2">
-          <div class="card-box">
-            <div class="dropdown pull-right">
-                <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
-                    <i class="zmdi zmdi-more-vert"></i>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="/chart-flot">Open this app</a></li>
-                    <li><a href="#">Change this snapshoot</a></li>
-                    <li><a href="#">Send feedback</a></li>
-                    <li class="divider"></li>
-                      <li> <type="button" class="btn btn-default btn-rounded w-md waves-effect m-b-5" id="btRemove2"/> Remove This app</li>
-                </ul>
-            </div>
-            <h4 class="header-title m-t-0 m-b-30">Total Revenue</h4>
+<div class="container">
+<div class="row">
+ <div class="col-lg-3 col-md-6" id="test2">
+                            <div class="card-box">
+                                    <div class="dropdown pull-right">
+                                        <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="chart-flot.html">Open this app</a></li>
+                                            <li><a href="#">Change this snapshoot</a></li>
+                                            <li><a href="#">Send feedback</a></li>
+                                            <li class="divider"></li>
+ <li> <type="button" class="btn btn-default btn-rounded w-md waves-effect m-b-5" id="btRemove2"/> Remove This app</li>                                        </ul>
+                                    </div>
 
-            <div class="widget-chart-1">
-                <div class="widget-chart-box-1">
-                    <div style="display:inline;width:80px;height:80px;"><canvas width="160" height="160" style="width: 80px; height: 80px;"></canvas><input data-plugin="knob" data-width="80" data-height="80" data-fgcolor="#f05050 " data-bgcolor="#F9B9B9" value="58" data-skin="tron" data-angleoffset="180" data-readonly="true" data-thickness=".15" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Arial; text-align: center; color: rgb(240, 80, 80); padding: 0px; -webkit-appearance: none; background: none;"></div>
-                </div>
+                              <h4 class="header-title m-t-0 m-b-30">Total Revenue</h4>
 
-                <div class="widget-detail-1">
-                    <h2 class="p-t-10 m-b-0"> 256 </h2>
-                    <p class="text-muted">Revenue today</p>
-                </div>
-            </div>
-          </div>
-        </div><!-- end col -->
+                                    <div class="widget-chart-1">
+                                        <div class="widget-chart-box-1">
+                                            <div style="display:inline;width:80px;height:80px;"><canvas width="160" height="160" style="width: 80px; height: 80px;"></canvas><input data-plugin="knob" data-width="80" data-height="80" data-fgcolor="#f05050 " data-bgcolor="#F9B9B9" value="58" data-skin="tron" data-angleoffset="180" data-readonly="true" data-thickness=".15" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Arial; text-align: center; color: rgb(240, 80, 80); padding: 0px; -webkit-appearance: none; background: none;"></div>
+                                        </div>
+
+                                        <div class="widget-detail-1">
+                                            <h2 class="p-t-10 m-b-0"> 256 </h2>
+                                            <p class="text-muted">Revenue today</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div><!-- end col -->
 
 
                             <div class="col-lg-3 col-md-6" id="test3">
@@ -446,7 +443,7 @@
                                             <i class="zmdi zmdi-more-vert"></i>
                                         </a>
                                         <ul class="dropdown-menu" role="menu">
-                                             <li><a href="/chart-flot">Open this app</a></li>
+                                             <li><a href="chart-flot.html">Open this app</a></li>
                                             <li><a href="#">Change this snapshoot</a></li>
                                             <li><a href="#">Send feedback</a></li>
                                             <li class="divider"></li>
@@ -477,7 +474,7 @@
                                             <i class="zmdi zmdi-more-vert"></i>
                                         </a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="/chart-flot">Open this app</a></li>
+                                            <li><a href="chart-flot.html">Open this app</a></li>
                                             <li><a href="#">Change this snapshoot</a></li>
                                             <li><a href="#">Send feedback</a></li>
                                             <li class="divider"></li>
@@ -505,7 +502,7 @@
                                             <i class="zmdi zmdi-more-vert"></i>
                                         </a>
                                         <ul class="dropdown-menu" role="menu">
-                                             <li><a href="/chart-flot">Open this app</a></li>
+                                             <li><a href="chart-flot.html">Open this app</a></li>
                                             <li><a href="#">Change this snapshoot</a></li>
                                             <li><a href="#">Send feedback</a></li>
                                             <li class="divider"></li>
@@ -539,7 +536,7 @@
                                             <i class="zmdi zmdi-more-vert"></i>
                                         </a>
                                         <ul class="dropdown-menu" role="menu">
-                                             <li><a href="/comp-chartjs">Open this app</a></li>
+                                             <li><a href="comp-chartjs.html">Open this app</a></li>
                                             <li><a href="#">Change this snapshoot</a></li>
                                             <li><a href="#">Send feedback</a></li>
                                             <li class="divider"></li>
@@ -560,7 +557,7 @@
                                             <i class="zmdi zmdi-more-vert"></i>
                                         </a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="/comp-chartjs">Open this app</a></li>
+                                            <li><a href="comp-chartjs.html">Open this app</a></li>
                                             <li><a href="#">Change this snapshoot</a></li>
                                             <li><a href="#">Send feedback</a></li>
                                             <li class="divider"></li>
@@ -575,11 +572,11 @@
                             <div class="col-lg-4" id="test1">
                                 <div class="card-box">
                                     <div class="dropdown pull-right">
-                                        <a href="/comp-chartjs" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
+                                        <a href="comp-chartjs.html" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
                                             <i class="zmdi zmdi-more-vert"></i>
                                         </a>
                                         <ul class="dropdown-menu" role="menu">
-                                             <li><a href="/comp-chartjs">Open this app</a></li>
+                                             <li><a href="comp-chartjs.html">Open this app</a></li>
                                             <li><a href="#">Change this snapshoot</a></li>
                                             <li><a href="#">Send feedback</a></li>
                                             <li class="divider"></li>
@@ -658,7 +655,7 @@
                                             <i class="zmdi zmdi-more-vert"></i>
                                         </a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="/tables">Open this app</a></li>
+                                            <li><a href="tables.html">Open this app</a></li>
                                             <li><a href="#">Change this snapshoot</a></li>
                                             <li><a href="#">Send feedback</a></li>
                                             <li class="divider"></li>
@@ -837,11 +834,11 @@ Morris.Area({
 </script>
 
 
-    </div>
+</div>
 
-    <a href="#" id="fixedbottom" class="md-trigger" data-modal="modal-1"><img src="img/add-button.png"></a>
-  </div>
-  <div class="md-overlay"></div>
+
+
+                        </div>
 
 
             <!-- ============================================================== -->
@@ -906,10 +903,8 @@ Morris.Area({
   <script src="js/jquery.ajaxchimp.js"></script>
   <!-- Elegant js scripts -->
   <script src="js/lj-elegant.js"></script>
-  <script src="js/smothScroll.js"></script>
-  <script src="assets/plugins/raphael/raphael-min.js"></script>
-  <script src="js/classie.js"></script>
-  <script src="js/modalEffects.js"></script>
+      <script src="js/smothScroll.js"></script>
+          <script src="assets/plugins/raphael/raphael-min.js"></script>
 
 
 
