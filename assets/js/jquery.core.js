@@ -1,8 +1,3 @@
-/**
-* Theme: Adminto Admin Template
-* Author: Coderthemes
-* Module/App: Core js
-*/
 
 
 //portlets
