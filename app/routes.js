@@ -52,13 +52,19 @@ module.exports = function(app, passport) {
     });
 
     app.get('/comp-chart', function(req, res) {
-        res.render('comp-chart.ejs', {
+        res.render('comp-chartjs.ejs', {
             user : req.user // get the user out of session and pass to template
         });
     });
 
     app.get('/tables', function(req, res) {
         res.render('tables.ejs', {
+            user : req.user // get the user out of session and pass to template
+        });
+    });
+
+    app.get('/notify', function(req, res) {
+        res.render('notify.ejs', {
             user : req.user // get the user out of session and pass to template
         });
     });

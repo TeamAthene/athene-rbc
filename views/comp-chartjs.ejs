@@ -43,7 +43,7 @@
     margin-bottom: 0px;
     margin-top: 0px;
     line-height: 70px;
-    padding-left: 400px
+    padding-left: 350px
 }
 
 
@@ -60,7 +60,7 @@
 
                 <!-- LOGO -->
                 <div class="topbar-left">
-                    <a href="index.html" class="logo"><img  alt="" src="img/RBC_Logo.png" scale="0" style="height: 36px;"></a>
+                    <a href="index" class="logo"><img  alt="" src="img/RBC_Logo.png" scale="0" style="height: 36px;"></a>
                 </div>
 
                 <!-- Button mobile view to collapse sidebar menu -->
@@ -106,54 +106,20 @@
                 <div class="content">
                     <div class="container">
 
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="card-box">
-                                    
-                                    <h4 class="header-title m-t-0 m-b-30">Line Chart</h4>
-
-                                    <canvas id="lineChart" height="300"></canvas>
-
-                                </div>
-                            </div><!-- end col-->
-
-                            <div class="col-lg-6">
-                                <div class="card-box">
-                                    
-
-                                    <h4 class="header-title m-t-0 m-b-30">Bar Chart</h4>
-
-                                    <canvas id="bar" height="300"></canvas>
-                                </div>
-                            </div><!-- end col-->
-
-                        </div>
-                        <!-- end row -->
-
-
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="card-box">
-                                   
-
-                                    <h4 class="header-title m-t-0 m-b-30">Pie Chart</h4>
-
-                                    <div id="myDiv" style="width: 400px; height: 601px;">
-                                </div>
-                            </div><!-- end col-->
-                           
+                   
+                  
 
                         </div>
                         <!-- end row -->
                         <script type="text/javascript">
                             
-var trace1 = {
+                            var trace1 = {
   x: [1, 2, 3, 4,],
   y: [0, 2, 3, 5],
   fill: 'tozeroy',
   type: 'scatter'
 };
-var trace2 = {
+var trace2 = {`
   x: [1, 2, 3, 4],
   y: [3, 5, 1, 7],
   fill: 'tonexty',
@@ -166,18 +132,7 @@ Plotly.newPlot('myDiv', data);
                         </script>
 
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="card-box">
-                                   
-
-                                    <h4 class="header-title m-t-0 m-b-30">Polar area Chart</h4>
-
-                                    <canvas id="polarArea" height="300"> </canvas>
-
-                                </div>
-                            </div><!-- end col-->
-
-                            <div class="col-lg-6">
+                              <div class="col-lg-6">
                                 <div class="card-box">
                                    
                                     <h4 class="header-title m-t-0 m-b-30"> Radar Chart</h4>
@@ -186,6 +141,120 @@ Plotly.newPlot('myDiv', data);
 
                                 </div>
                             </div><!-- end col-->
+                                            <div class="text-center">
+                                                <h3 class="font-600"> <i class="fa fa-bell-o" aria-hidden="true"></i>
+Insights  </h3>
+                              </div>
+                           <div class="col-lg-6">
+
+                                <div class="card-box">
+                                    <div class="dropdown pull-right">
+                                        <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Tell me more</a></li>
+                                            <li><a href="#">Not intersted</a></li>
+                                            <li><a href="#">How Does this Work</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Send feedback</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <h4 class="header-title m-t-0 m-b-30">Below Industry Average</h4>
+
+                           
+
+                                    <table class="table table-bordered m-0">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Stat</th>
+                                                <th>Revenue</th>
+                                                <th>Expenses</th>
+                                                <th>Payroll</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">High</th>
+                                                <td>12,000</td>
+                                                <td>11,000</td>
+                                                <td>9,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Average</th>
+                                                <td>12,000</td>
+                                                <td>11,000</td>
+                                                <td>9,000</td>
+                                            </tr>
+                                            <tr >
+                                                <th scope="row">Low</th>
+                                                <td>12,000</td>
+                                                <td>11,000</td>
+                                                <td bgcolor="#FF0000">9,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div><!-- end col -->
+
+                              <div class="col-lg-6">
+                                <div class="card-box">
+                                    <div class="dropdown pull-right">
+                                        <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Tell me more</a></li>
+                                            <li><a href="#">Not intersted</a></li>
+                                            <li><a href="#">How Does this Work</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Send feedback</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <h4 class="header-title m-t-0 m-b-30">Above Industry Average</h4>
+
+                           
+
+                                    <table class="table table-bordered m-0">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Stat</th>
+                                                <th>Revenue</th>
+                                                <th>Expenses</th>
+                                                <th>Payroll</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">High</th>
+                                                <td bgcolor="#32CD32" >12,000</td>
+                                                <td>11,000</td>
+                                                <td>9,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Average</th>
+                                                <td>12,000</td>
+                                                <td>11,000</td>
+                                                <td>9,000</td>
+                                            </tr>
+                                            <tr >
+                                                <th scope="row">Low</th>
+                                                <td >12,000</td>
+                                                <td>11,000</td>
+                                                <td>9,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div><!-- end col -->
+
+                      
                         </div>
                         <!-- end row -->
 

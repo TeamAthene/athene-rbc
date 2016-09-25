@@ -53,7 +53,7 @@
         cursor: pointer;
     }
 
-    .common-searches button.rbc-common:hover
+    .newclass button.rbc-common:hover
     {
         border-style: solid;
         border-width: 1px;
@@ -172,7 +172,7 @@ SEARCH AUTO COMPLETE ------
 
 /*
 navigation start
-*/
+
 
 
 #custom-bootstrap-menu.navbar-default .navbar-brand {
@@ -218,7 +218,7 @@ navigation start
 .navbar-brand{
    padding-top: 10px;
    }
-
+*/
 
 body {
 	padding: 0; /* Gets rid of the automatic padding */

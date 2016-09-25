@@ -1,9 +1,3 @@
-/**
-Template Name: Adminto Dashboard
-Author: CoderThemes
-Email: coderthemes@gmail.com
-File: Chartjs
-*/
 
 
 !function($) {
@@ -25,21 +19,10 @@ File: Chartjs
             // make chart width fit with its container
             var ww = selector.attr('width', $(container).width() );
             switch(type){
-                case 'Line':
-                    new Chart(ctx, {type: 'line', data: data, options: options});
-                    break;
-                case 'Doughnut':
-                   
-
-                case 'Bar':
-                    new Chart(ctx, {type: 'bar', data: data, options: options});
-                    break;
                 case 'Radar':
                     new Chart(ctx, {type: 'radar', data: data, options: options});
                     break;
-                case 'PolarArea':
-                    new Chart(ctx, {data: data, type: 'polarArea', options: options});
-                    break;
+           
             }
             // Initiate new chart or Redraw
 
@@ -49,72 +32,16 @@ File: Chartjs
     },
     //init
     ChartJs.prototype.init = function() {
-        //creating lineChart
-        var lineChart = {
-            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September"],
-            datasets: [
-                {
-                    label: "Sales Analytics",
-                    fill: false,
-                    lineTension: 0.1,
-                    backgroundColor: "#10c469",
-                    borderColor: "#10c469",
-                    borderCapStyle: 'butt',
-                    borderDash: [],
-                    borderDashOffset: 0.0,
-                    borderJoinStyle: 'miter',
-                    pointBorderColor: "#10c469",
-                    pointBackgroundColor: "#fff",
-                    pointBorderWidth: 1,
-                    pointHoverRadius: 5,
-                    pointHoverBackgroundColor: "#10c469",
-                    pointHoverBorderColor: "#eef0f2",
-                    pointHoverBorderWidth: 2,
-                    pointRadius: 1,
-                    pointHitRadius: 10,
-                    data: [65, 59, 80, 81, 56, 55, 40, 35, 30],
-                }
-            ]
-        };
-
-        var lineOpts = {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        max: 100,
-                        min: 20,
-                        stepSize: 10
-                    }
-                }]
-            }
-        };
-
-        this.respChart($("#lineChart"),'Line',lineChart, lineOpts);
+       
 
      
 
 
-        //barchart
-        var barChart = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [
-                {
-                    label: "Sales Analytics",
-                    backgroundColor: "rgba(24, 138, 226, 0.3)",
-                    borderColor: "#188ae2",
-                    borderWidth: 1,
-                    hoverBackgroundColor: "rgba(24, 138, 226,0.6)",
-                    hoverBorderColor: "#188ae2",
-                    data: [65, 59, 80, 81, 56, 55, 40,20]
-                }
-            ]
-        };
-        this.respChart($("#bar"),'Bar',barChart);
 
 
         //radar chart
         var radarChart = {
-            labels: ["Shipping", "Vendor", "Employee", "Accounting", "Rent", "Blah", "Blah"],
+            labels: ["Shipping", "Vendor", "Employee", "Accounting", "Rent", "Payroll", "Utilities"],
             datasets: [
                 {
                     label: "My Spending",
@@ -140,35 +67,7 @@ File: Chartjs
         };
         this.respChart($("#radar"),'Radar',radarChart);
 
-        //Polar area chart
-        var polarChart = {
-            datasets: [{
-                data: [
-                    11,
-                    16,
-                    7,
-                    3,
-                    14
-                ],
-                backgroundColor: [
-                    "#ff8acc",
-                    "#5b69bc",
-                    "#f9c851",
-                    "#E7E9ED",
-                    "#10c469"
-                ],
-                label: 'My dataset', // for legend
-                hoverBorderColor: "#fff"
-            }],
-            labels: [
-                "Series 1",
-                "Series 2",
-                "Series 3",
-                "Series 4",
-                "Series 5"
-            ]
-        };
-        this.respChart($("#polarArea"),'PolarArea',polarChart);
+        
     },
     $.ChartJs = new ChartJs, $.ChartJs.Constructor = ChartJs
 
